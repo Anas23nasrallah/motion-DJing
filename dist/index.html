@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/f897e93078.js" crossorigin="anonymous"></script>  
     <title>DJ</title>
 </head>
 
@@ -16,15 +17,17 @@
 
     <div id="header">
         <div class="allow">Click "Allow" above to start the partyyyy</div>
-        <div class="instructions">You're the DJ, Rock On!</div>
         <div class="browsersWithVideo">This demo lets you control stuff using motion detection in your browser. Install
             <a href="https://www.google.com/landing/chrome/beta/" target="_blank">Chrome Beta</a> to play.
         </div>
     </div>
 
     <div id="content">
+       
+        <div class="video">
+        <video id="webcam" autoplay width="690" height="460"></video>
+        </div>
 
-        <video id="webcam" autoplay width="640" height="480"></video>
 
         <video id="video-demo" controls="controls" poster="videos/jsdetection.jpg" width="640" height="480"
                onclick="if(/Android/.test(navigator.userAgent))this.play();">
@@ -36,13 +39,15 @@
 
         <canvas id="canvas-source" width="640" height="480"></canvas>
         <canvas id="canvas-highlights" width="640" height="480"></canvas>
-        <canvas id="canvas-blended" width="640" height="480"></canvas>
+        <canvas id="canvas-blended"  width="640" height="480"></canvas>
 
         <div id="hotSpots">
-            <div class="box-top-left">1</div>
-            <div class="box-top-right">2</div>
-            <div class="box-bot-left">3</div>
-            <div class="box-bot-right">4</div>
+            <div class="box-top-left"><i class="fas fa-drum"></i></div>
+            <div class="box-top-right"><i class="fas fa-guitar"></i></div>
+            <div class="box-bot-left"><i class="fas fa-cat"></i></div>
+            <div class="box-bot-right"><i class="fas fa-kiwi-bird"></i></div>
+            <div class="box-bot-low-left"><i class="fas fa-arrow-up"></i></div>
+            <div class="box-bot-low-right"><i class="fas fa-arrow-down"></i></div>
         </div>
 
     </div>
@@ -55,6 +60,19 @@
     
 
 </div>
+<div class="rock">You're the DJ, Rock On!
+</div>
+<footer>
+<div class="buttons">
+    <button class="btn btn0">Start</button>
+    <button class="btn btn1">Load</button>
+    <button class="btn btn2">Save</button>
+    <button class="btn btn3">Delete</button>
+    <select id="btn drop-down" required>
+        <option value="" disabled selected hidden>Choose a song to play!</option>
+    </select>	
+</div>
+</footer>
 
 
 
