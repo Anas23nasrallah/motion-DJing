@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-// //create a synth and connect it to the master output (your speakers)
-// var synth = new Tone.Synth().toMaster()
-console.log(`hi`);
+const Playlists = require(`../model/Playlists`)
 
-// //play a middle 'C' for the duration of an 8th note
-// synth.triggerAttackRelease('C4', '8n')
+router.get(`/playlists`, async function(req, res){ 
+    let playlists = await Playlists.find({})
+    res.send(playlists)
+})
 
 module.exports = router;

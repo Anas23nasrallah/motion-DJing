@@ -1,10 +1,10 @@
-$(`.box-top-left`).on(`click`, async function(){
-    let synth = new Tone.Synth().toMaster()
-    synth.triggerAttackRelease('D4', '4n')
-    await Tone.start()
+// $(`.box-top-left`).on(`click`, async function(){
+//     let synth = new Tone.Synth().toMaster()
+//     synth.triggerAttackRelease('D4', '4n')
+//     await Tone.start()
 
-    console.log('audio is ready')
-})
+//     console.log('audio is ready')
+// })
 
 
 
@@ -23,14 +23,5 @@ $(`.box-bot-left`).on(`click`, async function(){
 })
 
 $(`.box-bot-right`).on(`click`, async function(){
-    var instrument = new Tone.Instrument();
-    instrument.sync()
-//schedule 3 notes when the transport first starts
-instrument.triggerAttackRelease('C4', '8n', 0)
-instrument.triggerAttackRelease('E4', '8n', '8n')
-instrument.triggerAttackRelease('G4', '8n', '4n')
-//start the transport to hear the notes
-// Transport.start()
-    await Tone.start()
-	console.log('audio is ready')
+
 })
