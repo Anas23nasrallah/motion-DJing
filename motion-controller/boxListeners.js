@@ -20,4 +20,18 @@
 	// 	console.log('touched one');
 	// });
 
+
+	$('.box-top-left').on('motion',async function(ev, data){
+		
+		let synth = new Tone.Synth().toMaster()
+		synth.triggerAttackRelease('D4', '4n')
+		await Tone.start()
+
+		var spot = $(data.spot.el);
+		spot.addClass('active');
+		setTimeout(function(){
+			spot.removeClass('active');
+		}, 230);
+	})
+
 })();
