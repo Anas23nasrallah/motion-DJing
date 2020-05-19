@@ -1,22 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
     <title>DJ</title>
-
 </head>
-<body>
 
-        <div class="box-top-left">1</div>
-        <div class="box-top-right">2</div>
-        <div class="box-bot-left">3</div>
-        <div class="box-bot-right">4</div>
 
-    <script src="./jquery/dist/jquery.js"></script>
-    <script src="./tone/build/Tone.js"></script>
-    <script src="main.js"></script>
+<div id="container">
+
+    <div id="header">
+        <div class="allow">Click "Allow" above to start the partyyyy</div>
+        <div class="instructions">You're the DJ, Rock On!</div>
+        <div class="browsersWithVideo">This demo lets you control stuff using motion detection in your browser. Install
+            <a href="https://www.google.com/landing/chrome/beta/" target="_blank">Chrome Beta</a> to play.
+        </div>
+    </div>
+
+    <div id="content">
+
+        <video id="webcam" autoplay width="640" height="480"></video>
+
+        <video id="video-demo" controls="controls" poster="videos/jsdetection.jpg" width="640" height="480"
+               onclick="if(/Android/.test(navigator.userAgent))this.play();">
+            <source src="videos/jsdetection.mp4" type="video/mp4"/>
+            <source src="videos/jsdetection.ogg" type="video/ogg"/>
+            <source src="videos/jsdetection.webm" type="video/webm"/>
+            Your browser doesn't support the HTML5 video tag.
+        </video>
+
+        <canvas id="canvas-source" width="640" height="480"></canvas>
+        <canvas id="canvas-highlights" width="640" height="480"></canvas>
+        <canvas id="canvas-blended" width="640" height="480"></canvas>
+
+        <div id="hotSpots">
+            <div class="box-top-left">1</div>
+            <div class="box-top-right">2</div>
+            <div class="box-bot-left">3</div>
+            <div class="box-bot-right">4</div>
+        </div>
+
+    </div>
+
+    <div class="loading">Loading...</div>
+
+
+    
+
+    
+
+</div>
+
+
+
+<script src="./jquery/dist/jquery.js"></script>
+<script src="./app.js"></script>
+<script src="./boxListeners.js"></script>
+<script src="./tone/build/Tone.js"></script>
+<script src="main.js"></script>
+
+
 </body>
 </html>

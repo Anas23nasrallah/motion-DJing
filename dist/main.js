@@ -1,13 +1,11 @@
+$(`.box-top-left`).on(`click`, async function(){
+    let synth = new Tone.Synth().toMaster()
+    synth.triggerAttackRelease('D4', '4n')
+    await Tone.start()
 
+    console.log('audio is ready')
+})
 
-
-    $(`.box-top-left`).on(`click`, async function(){
-        let synth = new Tone.Synth().toMaster()
-        synth.triggerAttackRelease('D4', '4n')
-        await Tone.start()
-    
-        console.log('audio is ready')
-    })
 
 
 $(`.box-top-right`).on(`click`, async function(){
