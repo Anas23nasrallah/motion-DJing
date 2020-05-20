@@ -1,47 +1,42 @@
-.box-top-left {
-    top: 8px;
-    left: 16px;
-  }
-
-  .box-top-right {
-    top: 8px;
-    left: 820px;  
-  }
-
-  .box-bot-left {
+.drum {
+    left: 5%;
     top: 200px;
-    left: 16px;
   }
 
-  .box-bot-right {
-    top: 200px;
-    left: 820px;
+  .guitar {
+    left: 5%;
+    top: 350px;
+  }
+
+  .cat {
+    left: 15%;
+  }
+
+  .bird {
+    left: 30%;
   }
 
   
-  .box-bot-low-left {
-    top: 400px;
-    left: 16px;
+  .up {
+    left: 45%;
   }
 
-  .box-bot-low-right {
-    top: 400px;
-    left: 820px;   
+  .down{
+    left: 60%; 
   }
   
-  .box-up-left {
-    top: 8px;
-    left: 230px;  
+  .human {
+    left: 75%;
   }
   
-  .box-up-middle {
-    top: 8px;
-    left: 420px;  
+  .dizzy {
+    left: 85%;
+    top: 200px; 
   }
   
-  .box-up-right {
-    top: 8px;
-    left: 620px;   
+  .disease {
+    left: 85%;
+    top: 350px; 
   }
   
   .soundBox{
@@ -54,9 +49,11 @@
 
   .child {
     z-index: 1;
-    position: absolute;
+    width: 690;
+    height: 460;
+    /* position: absolute; */
     margin: center;
-    ;
+
   }
 
   .buttons {
