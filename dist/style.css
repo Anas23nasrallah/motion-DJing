@@ -1,120 +1,65 @@
-.box-top-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 18px;
-  }
-
-  .box-top-right {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 8px;
-    left: 820px;
-    font-size: 18px;    
-  }
-
-  .box-bot-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
+.drum {
+    left: 5%;
     top: 200px;
-    left: 16px;
-    font-size: 18px;
   }
 
-  .box-bot-right {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;;
-    margin: 0;
-    position: absolute;
-    top: 200px;
-    left: 820px;
-    font-size: 18px;
+  .guitar {
+    left: 5%;
+    top: 350px;
+  }
+
+  .cat {
+    left: 15%;
+  }
+
+  .bird {
+    left: 30%;
   }
 
   
-  .box-bot-low-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 400px;
-    left: 16px;
-    font-size: 18px;    
+  .up {
+    left: 45%;
   }
 
-  .box-bot-low-right {
+  .down{
+    left: 60%; 
+  }
+  
+  .human {
+    left: 75%;
+  }
+  
+  .dizzy {
+    left: 85%;
+    top: 200px; 
+  }
+  
+  .disease {
+    left: 85%;
+    top: 350px; 
+  }
+  
+  .soundBox{
     width: 20px;
     padding: 30px;
     border: 2px solid #FFFFFF;
     border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 400px;
-    left: 820px;
-    font-size: 18px;    
+    font-size: 18px; 
   }
-  
-  .box-up-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 8px;
-    left: 230px;
-    font-size: 18px;    
-  }
-  
-  .box-up-middle {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 8px;
-    left: 420px;
-    font-size: 18px;    
-  }
-  
-  .box-up-right {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 8px;
-    left: 620px;
-    font-size: 18px;    
-  }
-  
 
-  #box:hover {
-    background-color: red;
+  .child {
+    z-index: 1;
+    width: 690;
+    height: 460;
+    /* position: absolute; */
+    margin: center;
+
   }
 
   .buttons {
    text-align: center;
    margin-top: 700px;
+  
   }
 
   .btn {
@@ -129,6 +74,8 @@
     position: relative;
     overflow: hidden;
   }
+
+
   /* /////////////////  ICONS /////////////////////// */
 
 
@@ -137,11 +84,10 @@
     font-size: 20px;
   }
   /* /////////////////  WEBCAM BORDER /////////////////////// */
-  #webcam {
-    border: 9px groove rgba(122,32,86,0.67);
-    border-radius: 40px;
+  #content {
+    position: relative;
+    width: 100%;
   }
-  
 
   /* ////////////////////////// BUTTONS ///////////////// */
  
@@ -231,13 +177,15 @@
   }
   
   #content {
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     overflow: hidden;
-    z-index: 0;
+    /* z-index: 0; */
+    position: relative;
+    z-index: -1;
   }
   
   .loading {
