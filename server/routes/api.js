@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Playlists = require(`../model/Playlists`)
+const Song = require(`../model/Song`)
 
-router.get(`/playlists`, async function(req, res){ 
-    let playlists = await Playlists.find({})
-    res.send(playlists)
+router.get(`/songs`, async function(req, res){ 
+    let songs = await Song.find({})
+    res.send(songs)
 })
 
 module.exports = router;
