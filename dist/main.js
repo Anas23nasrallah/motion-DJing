@@ -1,29 +1,36 @@
-
 const logic = new Logic()
-const sound = new Sound()
 const motion = new Motion()
+let currName
 
-$(`.btn btn2`).on(`click`, function () {
-motion.startMotion()
-})
-
-$(`.btn btn0`).on(`click`, function(){
-
-})
-$('.box-top-left').on('motion', function (ev, data) {
-    sound.makeSound(`D4`, `4n`)
-    motion.addSpot(data)
+$(`.btn2`).on(`click`, function(){
+    console.log(`in main.js: save button`);
+    currName = prompt("name for song:")  
+    logic.setSave(true)
 })
 
-$('.box-top-right').on('motion', function (ev, data) {
-    sound.makeSound(`D5`, `4n`)
-    motion.addSpot(data)
+$(`.btn1`).on(`click`, function(){ 
+    let name = prompt("name for song:") 
+    logic.getSongFromDB(name)
 })
-$('.box-bot-left').on('motion', function (ev, data) {
-    sound.makeSound(`C1`, `4n`)
-    motion.addSpot(data)
+$(`.btn4`).on(`click`, function(){
+    logic.setSave(false)
+    logic.saveSongInDB(currName)
 })
-$('.box-bot-right').on('motion', function (ev, data) {
-    sound.makeSound(`C4`, `4n`)
-    motion.addSpot(data)
-})
+const motionDetector = function () {
+
+    $('.soundBox').on('motion', async function (ev, data) {
+        $(this).off('motion')
+        const $audio = $(this).find('audio')
+        const audio = $audio.get(0) 
+        audio.currentTime = 0
+        audio.play()
+        motion.addSpot(data)
+        if (logic.isSave()){
+            logic.saveSound($audio.get(0).src)
+        }
+    })
+
+    setTimeout(motionDetector, 800)
+}
+
+motionDetector()

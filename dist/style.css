@@ -71,6 +71,43 @@
     font-size: 18px;    
   }
   
+  .box-up-left {
+    width: 20px;
+    padding: 30px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    left: 230px;
+    font-size: 18px;    
+  }
+  
+  .box-up-middle {
+    width: 20px;
+    padding: 30px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    left: 420px;
+    font-size: 18px;    
+  }
+  
+  .box-up-right {
+    width: 20px;
+    padding: 30px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    left: 620px;
+    font-size: 18px;    
+  }
+  
+
   #box:hover {
     background-color: red;
   }
@@ -396,7 +433,7 @@
   
   /* Feel free to change this or turn it off altogether*/
   .active {
-    background: rgba(255, 255, 255, 0.7);
+    background:purple;
     -moz-transition: all 150ms linear;
     -webkit-transition: all 150ms linear;
     transition: all 150ms linear;

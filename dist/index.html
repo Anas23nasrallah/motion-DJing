@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">  
-    <script src="https://kit.fontawesome.com/f897e93078.js" crossorigin="anonymous"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f897e93078.js" crossorigin="anonymous"></script>
     <title>DJ</title>
 </head>
 
@@ -23,58 +23,86 @@
     </div>
 
     <div id="content">
-       
+
         <div class="video">
-        <video id="webcam" autoplay width="690" height="460"></video>
+            <video controls id="webcam" autoplay width="690" height="460"></video>
+            <video id="vid2" controls></video>
         </div>
 
 
         <video id="video-demo" controls="controls" poster="videos/jsdetection.jpg" width="640" height="480"
-               onclick="if(/Android/.test(navigator.userAgent))this.play();">
-            <source src="videos/jsdetection.mp4" type="video/mp4"/>
-            <source src="videos/jsdetection.ogg" type="video/ogg"/>
-            <source src="videos/jsdetection.webm" type="video/webm"/>
+            onclick="if(/Android/.test(navigator.userAgent))this.play();">
+            <source src="videos/jsdetection.mp4" type="video/mp4" />
+            <source src="videos/jsdetection.ogg" type="video/ogg" />
+            <source src="videos/jsdetection.webm" type="video/webm" />
             Your browser doesn't support the HTML5 video tag.
         </video>
 
         <canvas id="canvas-source" width="640" height="480"></canvas>
         <canvas id="canvas-highlights" width="640" height="480"></canvas>
-        <canvas id="canvas-blended"  width="640" height="480"></canvas>
+        <canvas id="canvas-blended" width="640" height="480"></canvas>
 
         <div id="hotSpots">
-            <div class="box-top-left"><i class="fas fa-drum"></i></div>
-            <div class="box-top-right"><i class="fas fa-guitar"></i></div>
-            <div class="box-bot-left"><i class="fas fa-cat"></i></div>
-            <div class="box-bot-right"><i class="fas fa-kiwi-bird"></i></div>
-            <div class="box-bot-low-left"><i class="fas fa-arrow-up"></i></div>
-            <div class="box-bot-low-right"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="box-top-left soundBox">
+                <audio src='./sounds/bubbles.mp3'></audio><i class="fas fa-drum"></i>
+            </div>
+
+            <div class="box-top-right soundBox">
+                <audio src='./sounds/clay.mp3'></audio><i class="fas fa-guitar"></i>
+            </div>
+
+            <div class="box-bot-left soundBox">
+                <audio src='./sounds/confetti.mp3'></audio><i class="fas fa-cat"></i>
+            </div>
+
+            <div class="box-bot-right soundBox">
+                <audio src='./sounds/glimmer.mp3'></audio><i class="fas fa-kiwi-bird"></i>
+            </div>
+
+            <div class="box-bot-low-left soundBox">
+                <audio src='./sounds/lake-birds.mp3'></audio><i class="fas fa-arrow-up"></i>
+            </div>
+
+            <div class="box-bot-low-right soundBox">
+                <audio src='./sounds/laughing-monster.mp3'></audio><i class="fas fa-arrow-down"></i>
+            </div>
+
+            <div class="box-up-left soundBox">
+                <audio src='./sounds/moon.mp3'></audio><i class="fas fa-child"></i>
+            </div>
+
+            <div class="box-up-middle soundBox">
+                <audio src='./sounds/ufo.mp3'></audio><i class="far fa-dizzy"></i>
+            </div>
+
+            <div class="box-up-right soundBox">
+                <audio src='./sounds/whistle-crash.mp3'></audio><i class="fas fa-disease"></i>
+            </div>
         </div>
 
     </div>
 
     <div class="loading">Loading...</div>
-
-
     
-
-    
-
 </div>
-<div class="rock">You're the DJ, Rock On!
-</div>
+
+<div class="rock">You're the DJ, Rock On!</div>
+
 <footer>
-<div class="buttons">
-    <button class="btn btn0">Start</button>
-    <button class="btn btn1">Load</button>
-    <button class="btn btn2">Save</button>
-    <button class="btn btn3">Delete</button>
-    <select id="btn drop-down" required>
-        <option value="" disabled selected hidden>Choose a song to play!</option>
-    </select>	
-</div>
+    <div class="buttons">
+        <button class="btn btn0">Start</button>
+        <button class="btn btn1">Load</button>
+        <button class="btn btn2">Save</button>
+        <button class="btn btn3">Delete</button>
+        <button class="btn btn4">Stop</button>
+        <select id="btn drop-down" required>
+            <script id="songs-template" type="text/x-handlebars-template">
+                <option class="user" data-id="{{name}}">{{name}}</option>
+            </script>
+        </select>
+    </div>
 </footer>
-
-
 
 <script src="./jquery/dist/jquery.js"></script>
 <script src="./app.js"></script>
@@ -84,6 +112,6 @@
 <script src="logic.js"></script>
 <script src="main.js"></script>
 
-
 </body>
+
 </html>
