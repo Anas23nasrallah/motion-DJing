@@ -1,4 +1,3 @@
-
 const logic = new Logic()
 const sound = new Sound()
 const motion = new Motion()
