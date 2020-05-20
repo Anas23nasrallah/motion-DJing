@@ -85,15 +85,16 @@
 
 <footer>
     <div class="buttons">
-        <button class="btn btn0">Start</button>
+        <button class="btn btn0" onClick="spin()">Start</button>
+        <button class="btn btn4" onClick="none()">Stop</button>
         <button class="btn btn2">Save</button>
         <button class="btn btn3">Delete</button>
-        <button class="btn btn4">Stop</button>
         <select id="drop-down">
             <script id="songs-template" type="text/x-handlebars-template">
                 <option class="user" data-id="{{name}}">{{name}}</option>
             </script>
         </select>
+        <div class="spin"></div>
     </div>
 </footer>
 
