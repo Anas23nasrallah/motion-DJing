@@ -15,7 +15,7 @@ const motionDetector = function () {
         motion.addSpot(data)
     })
 
-    setTimeout(motionDetector, 700)
+    setTimeout(motionDetector, 800)
 }
 
 motionDetector()
