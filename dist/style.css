@@ -1,120 +1,67 @@
 .box-top-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 8px;
     left: 16px;
-    font-size: 18px;
   }
 
   .box-top-right {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 8px;
-    left: 820px;
-    font-size: 18px;    
+    left: 820px;  
   }
 
   .box-bot-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 200px;
     left: 16px;
-    font-size: 18px;
   }
 
   .box-bot-right {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;;
-    margin: 0;
-    position: absolute;
     top: 200px;
     left: 820px;
-    font-size: 18px;
   }
 
   
   .box-bot-low-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 400px;
     left: 16px;
-    font-size: 18px;    
   }
 
   .box-bot-low-right {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 400px;
-    left: 820px;
-    font-size: 18px;    
+    left: 820px;   
   }
   
   .box-up-left {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 8px;
-    left: 230px;
-    font-size: 18px;    
+    left: 230px;  
   }
   
   .box-up-middle {
-    width: 20px;
-    padding: 30px;
-    border: 2px solid #FFFFFF;
-    border-radius: 30px;
-    margin: 0;
-    position: absolute;
     top: 8px;
-    left: 420px;
-    font-size: 18px;    
+    left: 420px;  
   }
   
   .box-up-right {
+    top: 8px;
+    left: 620px;   
+  }
+  
+  .soundBox{
     width: 20px;
     padding: 30px;
     border: 2px solid #FFFFFF;
     border-radius: 30px;
-    margin: 0;
-    position: absolute;
-    top: 8px;
-    left: 620px;
-    font-size: 18px;    
+    font-size: 18px; 
   }
-  
 
-  #box:hover {
-    background-color: red;
+  .child {
+    z-index: 1;
+    position: absolute;
+    margin: center;
   }
 
   .buttons {
    text-align: center;
    margin-top: 700px;
+  
   }
 
   .btn {
@@ -129,6 +76,8 @@
     position: relative;
     overflow: hidden;
   }
+
+
   /* /////////////////  ICONS /////////////////////// */
 
 
@@ -224,6 +173,8 @@
   
   video {
     display: none;
+    position: relative;
+    z-index: -1;
   }
   
   #container {

@@ -15,18 +15,50 @@
 
 <div id="container">
 
-    <div id="header">
-        <div class="allow">Click "Allow" above to start the partyyyy</div>
-        <div class="browsersWithVideo">This demo lets you control stuff using motion detection in your browser. Install
-            <a href="https://www.google.com/landing/chrome/beta/" target="_blank">Chrome Beta</a> to play.
-        </div>
-    </div>
 
     <div id="content">
 
         <div class="video">
             <video controls id="webcam" autoplay width="690" height="460"></video>
             <video id="vid2" controls></video>
+            <div class="child" id="hotSpots">
+
+                <div class="box-top-left soundBox">
+                    <audio src='./sounds/bubbles.mp3'></audio><i class="fas fa-drum"></i>
+                </div>
+    
+                <div class="box-top-right soundBox">
+                    <audio src='./sounds/clay.mp3'></audio><i class="fas fa-guitar"></i>
+                </div>
+    
+                <div class="box-bot-left soundBox">
+                    <audio src='./sounds/confetti.mp3'></audio><i class="fas fa-cat"></i>
+                </div>
+    
+                <div class="box-bot-right soundBox">
+                    <audio src='./sounds/glimmer.mp3'></audio><i class="fas fa-kiwi-bird"></i>
+                </div>
+    
+                <div class="box-bot-low-left soundBox">
+                    <audio src='./sounds/lake-birds.mp3'></audio><i class="fas fa-arrow-up"></i>
+                </div>
+    
+                <div class="box-bot-low-right soundBox">
+                    <audio src='./sounds/laughing-monster.mp3'></audio><i class="fas fa-arrow-down"></i>
+                </div>
+    
+                <div class="box-up-left soundBox">
+                    <audio src='./sounds/moon.mp3'></audio><i class="fas fa-child"></i>
+                </div>
+    
+                <div class="box-up-middle soundBox">
+                    <audio src='./sounds/ufo.mp3'></audio><i class="far fa-dizzy"></i>
+                </div>
+    
+                <div class="box-up-right soundBox">
+                    <audio src='./sounds/whistle-crash.mp3'></audio><i class="fas fa-disease"></i>
+                </div>
+            </div>
         </div>
 
 
@@ -41,45 +73,6 @@
         <canvas id="canvas-source" width="640" height="480"></canvas>
         <canvas id="canvas-highlights" width="640" height="480"></canvas>
         <canvas id="canvas-blended" width="640" height="480"></canvas>
-
-        <div id="hotSpots">
-
-            <div class="box-top-left soundBox">
-                <audio src='./sounds/bubbles.mp3'></audio><i class="fas fa-drum"></i>
-            </div>
-
-            <div class="box-top-right soundBox">
-                <audio src='./sounds/clay.mp3'></audio><i class="fas fa-guitar"></i>
-            </div>
-
-            <div class="box-bot-left soundBox">
-                <audio src='./sounds/confetti.mp3'></audio><i class="fas fa-cat"></i>
-            </div>
-
-            <div class="box-bot-right soundBox">
-                <audio src='./sounds/glimmer.mp3'></audio><i class="fas fa-kiwi-bird"></i>
-            </div>
-
-            <div class="box-bot-low-left soundBox">
-                <audio src='./sounds/lake-birds.mp3'></audio><i class="fas fa-arrow-up"></i>
-            </div>
-
-            <div class="box-bot-low-right soundBox">
-                <audio src='./sounds/laughing-monster.mp3'></audio><i class="fas fa-arrow-down"></i>
-            </div>
-
-            <div class="box-up-left soundBox">
-                <audio src='./sounds/moon.mp3'></audio><i class="fas fa-child"></i>
-            </div>
-
-            <div class="box-up-middle soundBox">
-                <audio src='./sounds/ufo.mp3'></audio><i class="far fa-dizzy"></i>
-            </div>
-
-            <div class="box-up-right soundBox">
-                <audio src='./sounds/whistle-crash.mp3'></audio><i class="fas fa-disease"></i>
-            </div>
-        </div>
 
     </div>
 
