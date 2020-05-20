@@ -44,7 +44,23 @@ const motionDetector = function () {
         }
     })
 
-    setTimeout(motionDetector, 800)
+    setTimeout(motionDetector, 1800)
+}
+
+function spin(){
+			
+
+    let elems = document.getElementsByClassName('spin');
+        for (let i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'block';
+}
+}
+
+function none(){
+    let elems = document.getElementsByClassName('spin');
+    for (let i=0;i<elems.length;i+=1){
+    elems[i].style.display = 'none';
+}
 }
 
 motionDetector()
