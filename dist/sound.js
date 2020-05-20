@@ -1,11 +1,11 @@
-class Sound{
-    constructor(){
-        console.log(`in sound.js`);
-        
+class Sound {
+    constructor() {
+        console.log(`in sound.js`)
+
     }
-    async makeSound(d, n){
+    makeSound(d, n) {
         let synth = new Tone.Synth().toMaster()
-		synth.triggerAttackRelease(d, n)
-		await Tone.start()
+        synth.triggerAttackRelease(d, n)
+        Tone.start()
     }
 }

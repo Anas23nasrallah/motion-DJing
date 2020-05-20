@@ -92,15 +92,18 @@
 <footer>
     <div class="buttons">
         <button class="btn btn0">Start</button>
-        <button class="btn btn1">Load</button>
         <button class="btn btn2">Save</button>
         <button class="btn btn3">Delete</button>
-        <select id="btn drop-down" required>
-            <option value="" disabled selected hidden>Choose a song to play!</option>
+        <button class="btn btn4">Stop</button>
+        <select id="drop-down">
+            <script id="songs-template" type="text/x-handlebars-template">
+                <option class="user" data-id="{{name}}">{{name}}</option>
+            </script>
         </select>
     </div>
 </footer>
 
+<script src="./handlebars/dist/handlebars.js"></script>
 <script src="./jquery/dist/jquery.js"></script>
 <script src="./app.js"></script>
 <script src="./motion.js"></script>
