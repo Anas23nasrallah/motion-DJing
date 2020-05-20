@@ -2,17 +2,31 @@ const logic = new Logic()
 const motion = new Motion()
 let currName
 
-$(`.btn2`).on(`click`, function(){
-    console.log(`in main.js: save button`);
+const loadMenu = async function(){
+    const names = await logic.getAllNames()
+    names.forEach(element => {
+        const sorce = $(`#songs-template`).html()
+        const template = Handlebars.compile(sorce)
+        const newHtml = template({name: element.name})
+        $(`#drop-down`).append(newHtml)
+    });
+    
+}
+$(`.btn2`).on(`click`, function(){//save
     currName = prompt("name for song:")  
     logic.setSave(true)
-})
 
-$(`.btn1`).on(`click`, function(){ 
-    let name = prompt("name for song:") 
+    const sorce = $(`#songs-template`).html()
+    const template = Handlebars.compile(sorce)
+    const newHtml = template({name: currName})
+    $(`#drop-down`).append(newHtml)
+})
+$("select").change(function() {
+    const name = $(`select option:selected`).data().id
     logic.getSongFromDB(name)
 })
-$(`.btn4`).on(`click`, function(){
+
+$(`.btn4`).on(`click`, function(){//stop
     logic.setSave(false)
     logic.saveSongInDB(currName)
 })
@@ -34,3 +48,4 @@ const motionDetector = function () {
 }
 
 motionDetector()
+loadMenu()

@@ -14,15 +14,12 @@ class Logic{
     async getSongFromDB(name) {
         const song = await $.get(`/song/${name}`)
         console.log(song);
-        // song[0].sequence.forEach(element => {
-        //     let audioElement = new Audio(element)
-        //     setTimeout(() => {
-        //         audioElement.play()
-        //     }, 3000)
-        // });
         this.playSequence(song[0].sequence)
     }
-    
+    async getAllNames(){
+      const names = await $.get(`/songNames`)
+      return names
+    }
     playSequence = (sounds) => {
         let audio = new Audio();
         let currentSoundIndex = 0;
