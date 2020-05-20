@@ -4,16 +4,18 @@ const motion = new Motion()
 
 
 
-const mainFunc = function(){
-    
+const motionDetector = function () {
+
     $('.soundBox').on('motion', async function (ev, data) {
         $(this).off('motion')
-        $audio = $(this).find('audio')
-        $audio.get(0).play()     //from jQuery element to DOM element
+        const $audio = $(this).find('audio')
+        const audio = $audio.get(0)  //from jQuery element to DOM element
+        audio.currentTime = 0
+        audio.play()
         motion.addSpot(data)
     })
 
-    setTimeout(mainFunc,2000)
+    setTimeout(motionDetector, 800)
 }
 
-mainFunc()
+motionDetector()
