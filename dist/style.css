@@ -93,7 +93,22 @@
   /* -webkit-appearance: button; */
   outline: none;
  }
+  /* /////////////////  IMAGE /////////////////////// */
 
+  .img {
+    position: absolute;
+    top: 300px;
+  }
+
+  .img2 {
+    position: absolute;
+    top: 300px;
+    right: 10px;
+  }
+
+  .im {
+    display: none
+  }
   /* /////////////////  ICONS /////////////////////// */
 
 
