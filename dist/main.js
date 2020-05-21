@@ -62,6 +62,22 @@ function none(){
     elems[i].style.display = 'none';
 }
 }
+let clicked = false
+
+$('.btn3').on('click', function() {
+    if (clicked === false) {
+        let elems = document.getElementsByClassName('im');
+        for (let i=0;i<elems.length;i+=1){
+            elems[i].style.display = 'block';
+            clicked = true
+        }
+    }else{
+        let elems = document.getElementsByClassName('im');
+        for (let i=0;i<elems.length;i+=1){
+            elems[i].style.display = 'none'
+            clicked = false;
+    };
+}});
 
 motionDetector()
 loadMenu()
