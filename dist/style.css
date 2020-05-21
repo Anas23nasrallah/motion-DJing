@@ -106,6 +106,17 @@
     right: 10px;
   }
 
+  .img3 {
+    position: absolute;
+    top: 500px;
+    right: 10px;
+  }
+
+  .img4 {
+    position: absolute;
+    top: 500px;
+  }
+
   .im {
     display: none
   }
