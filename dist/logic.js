@@ -8,8 +8,10 @@ class Logic{
     setSave(val){this.save = val}
     saveSound(sound){this.song.push(sound)}
     isSave(){return this.save}
+    
     saveSongInDB(name){
          $.post(`/song`, {src: this.song, name: name})
+         this.song = []
     }
     async getSongFromDB(name) {
         const song = await $.get(`/song/${name}`)
